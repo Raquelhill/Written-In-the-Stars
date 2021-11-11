@@ -1,0 +1,21 @@
+.Header {
+  background-image: url('sky.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  height: 400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 60px;
+  color: white;
+}
+
+.all-signs-nav {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
