@@ -19,3 +19,14 @@
   text-decoration: none;
   color: white;
 }
+
+.drop-down {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  width: 160px;
+}
+.drop-down :hover {
+  color: blueviolet;
+}
