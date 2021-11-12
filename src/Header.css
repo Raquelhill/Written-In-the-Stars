@@ -1,9 +1,10 @@
 .Header {
-  background-image: url('sky.webp');
+  /* background-image: url('sky.webp');
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
-  height: 400px;
+  background-size: contain; */
+  color: #9c82cd;
+  height: 200px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -11,22 +12,36 @@
 
 .title {
   font-size: 60px;
-  color: white;
+  color: #9c82cd;
+  padding: 30px;
 }
 
-.all-signs-nav {
-  font-size: 24px;
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   text-decoration: none;
-  color: white;
+  font-size: 20px;
 }
 
-.drop-down {
-  background-color: white;
+.home-button {
   text-decoration: none;
-  color: black;
-  padding: 8px;
-  width: 160px;
+  color: #9c82cd;
+  padding: 60px;
 }
-.drop-down :hover {
-  color: blueviolet;
+.home-button:hover {
+  color: #af8ad2;
+}
+
+#dropdown-basic-button {
+  color: #9c82cd;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 20px;
+}
+#dropdown-basic-button:hover {
+  color: #af8ad2;
+}
+#dropdown-basic-button:active {
+  border-color: transparent;
 }

@@ -1,13 +1,14 @@
 import React from 'react';
 import './ZodiacSignContainer.css';
+import './sag.jpg';
 import { Link } from 'react-router-dom';
 
-const ZodiacSignContainer = (id) => {
+const ZodiacSignContainer = ({ id }) => {
   return (
     <section className="button-container">
       <h1 className="choose-sign">Choose Your Zodiac Sign</h1>
       <section className="top-buttons">
-        <Link to={`/${id}`}>
+        <Link to={`/aries`}>
           <div>
             <button id="aries">
               Aries
@@ -82,6 +83,11 @@ const ZodiacSignContainer = (id) => {
           <div>
             <button id="sagittarius">
               Sagittarius
+              <img
+                alt="Sagittarius Zodiac Sign"
+                className="img-responsive"
+                src="sag.jpg"
+              />
               <p>Nov 22 - Dec 21</p>
             </button>
           </div>

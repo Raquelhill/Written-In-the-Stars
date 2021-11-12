@@ -3,6 +3,7 @@ import SingleZodiac from './SingleZodiac';
 import ZodiacSignContainer from './ZodiacSignContainer';
 import Header from './Header';
 import React, { Component } from 'react';
+import './sag.jpg';
 import { Route } from 'react-router-dom';
 
 class App extends Component {
@@ -10,7 +11,6 @@ class App extends Component {
     super(props);
     this.state = {
       json: {},
-      id: '',
       isLoading: true,
     };
   }

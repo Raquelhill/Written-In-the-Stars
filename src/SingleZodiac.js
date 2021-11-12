@@ -11,7 +11,7 @@ class SingleZodiac extends Component {
   }
 
   componentDidMount() {
-    const URL = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
+    const URL = `https://aztro.sameerkumar.website/?sign=gemini&day=today`;
     fetch(URL, {
       method: 'POST',
     })
