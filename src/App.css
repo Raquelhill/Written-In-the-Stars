@@ -1,4 +1,12 @@
 .App {
-  background-color: black;
+  /* background-image: url('sky.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-decoration: none; */
+  background: white;
+}
+
+a {
   text-decoration: none;
 }
