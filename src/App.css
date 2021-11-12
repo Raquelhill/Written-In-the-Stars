@@ -1,12 +1,7 @@
 .App {
-  /* background-image: url('sky.webp');
+  background-image: url('starsky.webp');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  text-decoration: none; */
-  background: white;
-}
-
-a {
-  text-decoration: none;
+  background-size: cover;
+  height: 2000px;
 }

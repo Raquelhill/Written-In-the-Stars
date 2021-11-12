@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="Header">
       <div className="title-container">
-        <h1 className="title">✨ WRITTEN IN THE STARS</h1>
+        <h1 className="title">WRITTEN IN THE STARS</h1>
       </div>
       <div className="nav-buttons">
         <DropdownButton
@@ -16,18 +16,18 @@ const Header = () => {
           id="dropdown-basic-button"
           title="ZODIAC SIGNS"
         >
-          <Dropdown.Item href="#/action-1">Aries</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Taurus</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Gemini</Dropdown.Item>
-          <Dropdown.Item href="#/action-4">Cancer</Dropdown.Item>
-          <Dropdown.Item href="#/action-5">Leo</Dropdown.Item>
-          <Dropdown.Item href="#/action-6">Virgo</Dropdown.Item>
-          <Dropdown.Item href="#/action-7">Libra</Dropdown.Item>
-          <Dropdown.Item href="#/action-8">Scorpio</Dropdown.Item>
-          <Dropdown.Item href="#/action-9">Sagittarius</Dropdown.Item>
-          <Dropdown.Item href="#/action-10">Capricorn</Dropdown.Item>
-          <Dropdown.Item href="#/action-11">Aquarius</Dropdown.Item>
-          <Dropdown.Item href="#/action-12">Pisces</Dropdown.Item>
+          <Dropdown.Item href="/aries">Aries</Dropdown.Item>
+          <Dropdown.Item href="/taurus">Taurus</Dropdown.Item>
+          <Dropdown.Item href="/gemini">Gemini</Dropdown.Item>
+          <Dropdown.Item href="/cancer">Cancer</Dropdown.Item>
+          <Dropdown.Item href="/leo">Leo</Dropdown.Item>
+          <Dropdown.Item href="/virgo">Virgo</Dropdown.Item>
+          <Dropdown.Item href="/libra">Libra</Dropdown.Item>
+          <Dropdown.Item href="/scorpio">Scorpio</Dropdown.Item>
+          <Dropdown.Item href="/sagittarius">Sagittarius</Dropdown.Item>
+          <Dropdown.Item href="/capricorn">Capricorn</Dropdown.Item>
+          <Dropdown.Item href="/aquarius">Aquarius</Dropdown.Item>
+          <Dropdown.Item href="/pisces">Pisces</Dropdown.Item>
         </DropdownButton>
         <NavLink exact to="/" id="home" className="home-button">
           HOME
