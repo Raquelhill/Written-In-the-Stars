@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 import './SingleZodiac.css';
 
@@ -7,11 +8,12 @@ class SingleZodiac extends Component {
     super(props);
     this.state = {
       json: {},
+      id: '',
     };
   }
 
   componentDidMount() {
-    const URL = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
+    const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
     fetch(URL, {
       method: 'POST',
     })
@@ -27,14 +29,21 @@ class SingleZodiac extends Component {
         <>
           <Header />
           <section className="sign-details">
-            Current Date: {this.state.json.current_date} <br />
-            Compatibility: {this.state.json.compatibility} <br />
-            Lucky Number: {this.state.json.lucky_number} <br />
-            Lucky Time: {this.state.json.lucky_time} <br />
-            Color: {this.state.json.color} <br />
-            Date Range: {this.state.json.date_range} <br />
-            Mood: {this.state.json.mood} <br />
-            Description: {this.state.json.description} <br />
+            <div className="sign-styling">
+              <p className="current-sign">{this.props.id} </p>
+              <p>{this.state.json.date_range}</p>
+              <p>Today's Date: {this.state.json.current_date} </p>
+              {/* <Link to={`/${this.state.json.compatibility}`}> */}
+              <p>✨ Top Love Match: {this.state.json.compatibility}✨</p>
+              {/* </Link> */}
+              <p>Lucky Number: {this.state.json.lucky_number} </p>
+              <p>Lucky Time: {this.state.json.lucky_time} </p>
+              <p>Spirit Color: {this.state.json.color} </p>
+              <p>Quality: {this.state.json.mood} </p>
+              <p className="description">
+                Horoscope: {this.state.json.description}{' '}
+              </p>
+            </div>
           </section>
         </>
       </div>

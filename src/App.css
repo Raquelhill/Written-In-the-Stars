@@ -1,4 +1,7 @@
 .App {
-  background-color: black;
-  text-decoration: none;
+  background-image: url('starsky.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2000px;
 }
