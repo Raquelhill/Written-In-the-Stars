@@ -3,12 +3,17 @@ import './Header.css';
 import { NavLink } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import Giphy from './giphy.gif';
 
 const Header = () => {
   return (
     <header className="Header">
       <div className="title-container">
-        <h1 className="title">WRITTEN IN THE STARS</h1>
+        <h1 className="title">
+          <img src={Giphy} className="star-image" alt="Star" />
+          WRITTEN IN THE STARS
+          <img src={Giphy} className="star-image" alt="Star" />
+        </h1>
       </div>
       <div className="nav-buttons">
         <DropdownButton
@@ -28,6 +33,15 @@ const Header = () => {
           <Dropdown.Item href="/capricorn">Capricorn</Dropdown.Item>
           <Dropdown.Item href="/aquarius">Aquarius</Dropdown.Item>
           <Dropdown.Item href="/pisces">Pisces</Dropdown.Item>
+        </DropdownButton>
+        <DropdownButton
+          className="drop-button"
+          id="dropdown-basic-button"
+          title="HOROSCOPE"
+        >
+          <Dropdown.Item href="/yesterday">YESTERDAY</Dropdown.Item>
+          <Dropdown.Item href="/today">TODAY</Dropdown.Item>
+          <Dropdown.Item href="/tomorrow">TOMORROW</Dropdown.Item>
         </DropdownButton>
         <NavLink exact to="/" id="home" className="home-button">
           HOME
