@@ -1,23 +1,22 @@
 .button-styling {
-  border-color: #ddcee0;
-  background: #fff;
+  background: white;
   box-shadow: 1px 2px 5px rgb(0 0 0 / 15%);
   box-sizing: border-box;
   padding: 60px;
   margin: 10px;
-  border: 10px solid #aa5877;
+  border: 12px solid #b8757f;
   font-size: 26px;
   text-decoration: none;
 }
 
 img {
-  height: 120px;
+  height: 200px;
   padding-bottom: 50px;
 }
 p {
-  color: #2d253a;
+  color: #5b4596;
   font-size: 22px;
-  padding: 20px;
+  padding: 5px;
 }
 
 .buttons {
