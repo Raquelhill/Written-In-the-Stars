@@ -4,9 +4,10 @@
   align-items: center;
 }
 .choose-sign {
-  color: white;
+  color: #b8757f;
   font-size: 40px;
-  margin: 100px;
+  margin-top: -150px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: center;
 }
