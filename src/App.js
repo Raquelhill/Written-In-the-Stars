@@ -36,7 +36,15 @@ class App extends Component {
           exact
           path="/:id"
           render={({ match }) => {
-            const currentZodiacId = match.params.id;
+            let currentZodiacId = match.params.id;
+            return <SingleZodiac id={currentZodiacId} />;
+          }}
+        />
+        <Route
+          exact
+          path="/:id/today"
+          render={({ match }) => {
+            let currentZodiacId = match.params.id;
             return <SingleZodiac id={currentZodiacId} />;
           }}
         />

@@ -39,9 +39,9 @@ const Header = () => {
           id="dropdown-basic-button"
           title="HOROSCOPE"
         >
-          <Dropdown.Item href="/yesterday">YESTERDAY</Dropdown.Item>
-          <Dropdown.Item href="/today">TODAY</Dropdown.Item>
-          <Dropdown.Item href="/tomorrow">TOMORROW</Dropdown.Item>
+          <Dropdown.Item href="/yesterday">Yesterday</Dropdown.Item>
+          <Dropdown.Item href="/today">Today</Dropdown.Item>
+          <Dropdown.Item href="/tomorrow">Tomorrow</Dropdown.Item>
         </DropdownButton>
         <NavLink exact to="/" id="home" className="home-button">
           HOME

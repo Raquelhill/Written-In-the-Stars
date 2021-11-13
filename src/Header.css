@@ -30,13 +30,14 @@
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 .home-button {
   text-decoration: none;
   color: white;
-  padding: 60px;
+  padding-right: 30px;
+  padding-left: 10px;
 }
 .home-button:hover {
   color: white;
@@ -52,12 +53,4 @@
 
 #dropdown-basic-button:hover {
   color: white;
-}
-
-#dropdown-basic-button:focus {
-  border-color: transparent;
-}
-
-.btn-primary:focus {
-  border-color: transparent;
 }

@@ -24,6 +24,11 @@ class SingleZodiac extends Component {
   }
 
   render() {
+    const aztroJs = require('aztro-js');
+    let sign = this.props.id;
+    aztroJs.getAllHoroscope(sign, function (details) {
+      console.log(details);
+    });
     return (
       <div>
         <>
@@ -31,16 +36,14 @@ class SingleZodiac extends Component {
           <section className="sign-details">
             <div className="sign-styling">
               <p className="current-sign">{this.props.id}</p>
-              <p>{this.state.json.date_range}</p>
-              <p>Today's Date: {this.state.json.current_date} </p>
-              <p>Top Love Match: {this.state.json.compatibility}</p>
-              <p>Lucky Number: {this.state.json.lucky_number} </p>
-              <p>Lucky Time: {this.state.json.lucky_time} </p>
+              <p className="current-sign">{this.state.json.date_range}</p>
+              <p>Daily Horoscope: {this.state.json.current_date} </p>
+              <p className="description">{this.state.json.description}</p>
+              <p>Compatability: {this.state.json.compatibility}</p>
+              <p>Mood: {this.state.json.mood} </p>
               <p>Spirit Color: {this.state.json.color} </p>
-              <p>Quality: {this.state.json.mood} </p>
-              <p className="description">
-                Horoscope: {this.state.json.description}{' '}
-              </p>
+              <p>Lucky Number: {this.state.json.lucky_number} </p>
+              <p>Lucky Time of Day: {this.state.json.lucky_time} </p>
             </div>
           </section>
         </>
