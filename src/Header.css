@@ -1,5 +1,11 @@
 .Header {
-  height: 200px;
+  background-image: linear-gradient(to bottom, transparent, #2f295c),
+    url('cosmic.webp');
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -7,9 +13,14 @@
 
 .title {
   font-size: 60px;
-  color: #2e2d49;
-  padding: 60px;
-  margin-top: 30px;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.star-image {
+  padding-bottom: 0px;
 }
 
 .nav-buttons {
@@ -17,30 +28,32 @@
   flex-direction: row;
   align-items: center;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
-  padding-top: 65px;
+  padding-top: 80px;
 }
 
 .home-button {
   text-decoration: none;
-  color: #f38384;
+  color: white;
   padding: 60px;
 }
 .home-button:hover {
-  color: #f38384;
+  color: white;
 }
 
 #dropdown-basic-button {
-  color: #f38384;
+  color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   background-color: transparent;
   border-color: transparent;
 }
+
 #dropdown-basic-button:hover {
-  color: #f38384;
+  color: white;
 }
+
 #dropdown-basic-button:focus {
   border-color: transparent;
 }

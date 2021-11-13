@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Header from './Header';
 import './SingleZodiac.css';
 
@@ -9,6 +8,7 @@ class SingleZodiac extends Component {
     this.state = {
       json: {},
       id: '',
+      day: '',
     };
   }
 
@@ -30,12 +30,10 @@ class SingleZodiac extends Component {
           <Header />
           <section className="sign-details">
             <div className="sign-styling">
-              <p className="current-sign">{this.props.id} </p>
+              <p className="current-sign">{this.props.id}</p>
               <p>{this.state.json.date_range}</p>
               <p>Today's Date: {this.state.json.current_date} </p>
-              {/* <Link to={`/${this.state.json.compatibility}`}> */}
-              <p>✨ Top Love Match: {this.state.json.compatibility}✨</p>
-              {/* </Link> */}
+              <p>Top Love Match: {this.state.json.compatibility}</p>
               <p>Lucky Number: {this.state.json.lucky_number} </p>
               <p>Lucky Time: {this.state.json.lucky_time} </p>
               <p>Spirit Color: {this.state.json.color} </p>
