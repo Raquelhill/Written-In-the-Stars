@@ -12,21 +12,26 @@ class App extends Component {
     this.state = {
       json: {},
       id: '',
-      day: '',
+      day: 'today',
       isLoading: true,
     };
   }
 
+  updateDay = (day) => {
+    this.setState({ day: day });
+    // console.log(day);
+  };
+
   render() {
     return (
       <main className="App">
+        <Header updateDay={this.updateDay} />
         <Route
           exact
           path="/"
           render={() => {
             return (
               <>
-                <Header />
                 <ZodiacSignContainer />
               </>
             );
@@ -34,20 +39,21 @@ class App extends Component {
         />
         <Route
           exact
-          path="/:id"
+          path="/:id/:day"
           render={({ match }) => {
             let currentZodiacId = match.params.id;
-            return <SingleZodiac id={currentZodiacId} />;
+            let day = match.params.day;
+            return <SingleZodiac id={currentZodiacId} day={day} />;
           }}
         />
-        <Route
+        {/* <Route
           exact
           path="/:id/today"
           render={({ match }) => {
             let currentZodiacId = match.params.id;
             return <SingleZodiac id={currentZodiacId} />;
-          }}
-        />
+          }} */}
+        {/* /> */}
       </main>
     );
   }

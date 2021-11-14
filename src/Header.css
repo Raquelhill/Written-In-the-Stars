@@ -1,7 +1,5 @@
 .Header {
-  background-image: linear-gradient(to bottom, transparent, #2f295c),
-    url('cosmic.webp');
-
+  background-image: linear-gradient(transparent, #2f295c), url('cosmic.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,6 +17,7 @@
   flex-direction: row;
   align-items: center;
 }
+
 .star-image {
   padding-bottom: 0px;
 }
