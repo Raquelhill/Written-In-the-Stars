@@ -7,25 +7,10 @@ import './sag.jpg';
 import { Route } from 'react-router-dom';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      json: {},
-      id: '',
-      day: 'today',
-      isLoading: true,
-    };
-  }
-
-  updateDay = (day) => {
-    this.setState({ day: day });
-    // console.log(day);
-  };
-
   render() {
     return (
       <main className="App">
-        <Header updateDay={this.updateDay} />
+        <Header />
         <Route
           exact
           path="/"
@@ -38,7 +23,6 @@ class App extends Component {
           }}
         />
         <Route
-          exact
           path="/:id/:day"
           render={({ match }) => {
             let currentZodiacId = match.params.id;
@@ -46,14 +30,6 @@ class App extends Component {
             return <SingleZodiac id={currentZodiacId} day={day} />;
           }}
         />
-        {/* <Route
-          exact
-          path="/:id/today"
-          render={({ match }) => {
-            let currentZodiacId = match.params.id;
-            return <SingleZodiac id={currentZodiacId} />;
-          }} */}
-        {/* /> */}
       </main>
     );
   }

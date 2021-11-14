@@ -5,7 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Giphy from './giphy.gif';
 class Header extends React.Component {
-  state = { sign: '', day: '' };
+  state = { sign: '' };
 
   render() {
     return (
@@ -24,7 +24,7 @@ class Header extends React.Component {
             title="ZODIAC SIGNS"
             onSelect={(e) => this.setState({ sign: e })}
           >
-            <Dropdown.Item eventKey="aries" href="/aries/today">
+            <Dropdown.Item eventKey="aries" as={Link} to="/aries/today">
               Aries
             </Dropdown.Item>
             <Dropdown.Item eventKey="taurus" href="/taurus/today">
@@ -65,24 +65,20 @@ class Header extends React.Component {
             className="drop-button"
             id="dropdown-basic-button"
             title="HOROSCOPE"
-            onSelect={(e) => this.setState({ day: e })}
           >
-            {/* <Link to={`/${this.state.sign}/yesterday`}> */}
             <Dropdown.Item
-              href={`/aries/${this.state.day}`}
+              as={Link}
+              to={`/cancer/yesterday`}
               eventKey="yesterday"
             >
               Yesterday
             </Dropdown.Item>
-            {/* </Link> */}
-            <Dropdown.Item
-              href={`/${this.state.sign}/${this.state.day}`}
-              eventKey="today"
-            >
+            <Dropdown.Item as={Link} to={`/cancer/today`} eventKey="today">
               Today
             </Dropdown.Item>
             <Dropdown.Item
-              href={`/${this.state.sign}/${this.state.day}`}
+              as={Link}
+              to={`/cancer/tomorrow`}
               eventKey="tomorrow"
             >
               Tomorrow
