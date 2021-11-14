@@ -30,6 +30,10 @@
   justify-content: center;
 }
 
+.horoscope-styling {
+  padding: 20px;
+}
+
 .description {
   font-size: 20px;
   width: 600px;
