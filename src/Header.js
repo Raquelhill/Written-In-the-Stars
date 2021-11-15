@@ -5,9 +5,14 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Giphy from './giphy.gif';
 class Header extends React.Component {
-  state = { sign: '' };
+  state = { sign: '', day: '' };
 
   render() {
+    if (this.state !== undefined) {
+      {
+        console.log(this.state);
+      }
+    }
     return (
       <header className="Header">
         <div className="title-container">
@@ -27,37 +32,41 @@ class Header extends React.Component {
             <Dropdown.Item eventKey="aries" as={Link} to="/aries/today">
               Aries
             </Dropdown.Item>
-            <Dropdown.Item eventKey="taurus" href="/taurus/today">
+            <Dropdown.Item eventKey="taurus" as={Link} to="/taurus/today">
               Taurus
             </Dropdown.Item>
-            <Dropdown.Item eventKey="gemini" href="/gemini/today">
+            <Dropdown.Item eventKey="gemini" as={Link} to="/gemini/today">
               Gemini
             </Dropdown.Item>
-            <Dropdown.Item eventKey="cancer" href="/cancer/today">
+            <Dropdown.Item eventKey="cancer" as={Link} to="/cancer/today">
               Cancer
             </Dropdown.Item>
-            <Dropdown.Item eventKey="leo" href="/leo/today">
+            <Dropdown.Item eventKey="leo" as={Link} to="/leo/today">
               Leo
             </Dropdown.Item>
-            <Dropdown.Item eventKey="virgo" href="/virgo/today">
+            <Dropdown.Item eventKey="virgo" as={Link} to="/virgo/today">
               Virgo
             </Dropdown.Item>
-            <Dropdown.Item eventKey="libra" href="/libra/today">
+            <Dropdown.Item eventKey="libra" as={Link} to="/libra/today">
               Libra
             </Dropdown.Item>
-            <Dropdown.Item eventKey="scorpio" href="/scorpio/today">
+            <Dropdown.Item eventKey="scorpio" as={Link} to="/scorpio/today">
               Scorpio
             </Dropdown.Item>
-            <Dropdown.Item eventKey="sagittarius" href="/sagittarius/today">
+            <Dropdown.Item
+              eventKey="sagittarius"
+              as={Link}
+              to="/sagittarius/today"
+            >
               Sagittarius
             </Dropdown.Item>
-            <Dropdown.Item eventKey="capricorn" href="/capricorn/today">
+            <Dropdown.Item eventKey="capricorn" as={Link} to="/capricorn/today">
               Capricorn
             </Dropdown.Item>
-            <Dropdown.Item eventKey="aquarius" href="/aquarius/today">
+            <Dropdown.Item eventKey="aquarius" as={Link} to="/aquarius/today">
               Aquarius
             </Dropdown.Item>
-            <Dropdown.Item eventKey="pisces" href="/pisces/today">
+            <Dropdown.Item eventKey="pisces" as={Link} to="/pisces/today">
               Pisces
             </Dropdown.Item>
           </DropdownButton>
@@ -65,20 +74,25 @@ class Header extends React.Component {
             className="drop-button"
             id="dropdown-basic-button"
             title="HOROSCOPE"
+            onSelect={(e) => this.setState({ day: e })}
           >
             <Dropdown.Item
               as={Link}
-              to={`/cancer/yesterday`}
+              to={`/${this.state.sign}/yesterday`}
               eventKey="yesterday"
             >
               Yesterday
             </Dropdown.Item>
-            <Dropdown.Item as={Link} to={`/cancer/today`} eventKey="today">
+            <Dropdown.Item
+              as={Link}
+              to={`/${this.state.sign}/today`}
+              eventKey="today"
+            >
               Today
             </Dropdown.Item>
             <Dropdown.Item
               as={Link}
-              to={`/cancer/tomorrow`}
+              to={`/${this.state.sign}/tomorrow`}
               eventKey="tomorrow"
             >
               Tomorrow

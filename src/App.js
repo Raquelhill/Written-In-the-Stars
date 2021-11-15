@@ -25,6 +25,7 @@ class App extends Component {
         <Route
           path="/:id/:day"
           render={({ match }) => {
+            console.log('MATCH', match.params);
             let currentZodiacId = match.params.id;
             let day = match.params.day;
             return <SingleZodiac id={currentZodiacId} day={day} />;

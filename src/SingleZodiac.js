@@ -7,13 +7,13 @@ class SingleZodiac extends Component {
     super(props);
     this.state = {
       json: {},
-      id: '',
-      day: '',
+      id: this.props.id,
+      day: this.props.day,
     };
   }
 
   componentDidMount() {
-    const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.props.day}`;
+    const URL = `https://aztro.sameerkumar.website/?sign=${this.state.id}&day=${this.state.day}`;
     fetch(URL, {
       method: 'POST',
     })
@@ -24,6 +24,7 @@ class SingleZodiac extends Component {
   }
 
   render() {
+    console.log('STATE', this.state);
     return (
       <div>
         <>
