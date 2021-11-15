@@ -11,11 +11,6 @@ class Header extends React.Component {
   }
 
   render() {
-    // if (this.state !== undefined) {
-    //   {
-    //     console.log(this.state);
-    //   }
-    // }
     return (
       <header className="Header">
         <div className="title-container">
@@ -31,7 +26,7 @@ class Header extends React.Component {
             id="dropdown-basic-button"
             title="ZODIAC SIGNS"
             onSelect={(e) => {
-              this.setState({ sign: e })
+              this.setState({ sign: e });
             }}
           >
             <Dropdown.Item eventKey="aries" as={Link} to="/aries">
@@ -71,7 +66,6 @@ class Header extends React.Component {
               Pisces
             </Dropdown.Item>
           </DropdownButton>
-          
           <NavLink exact to="/" id="home" className="home-button">
             HOME
           </NavLink>
