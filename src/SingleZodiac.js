@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 import './SingleZodiac.css';
 
@@ -7,13 +8,41 @@ class SingleZodiac extends Component {
     super(props);
     this.state = {
       json: {},
-      id: '',
-      day: '',
+      id: this.props.id,
+      day: this.props.day,
     };
   }
 
   componentDidMount() {
-    const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
+    console.log('PROPS', this.props);
+    const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.props.day}`;
+    // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
+    fetch(URL, {
+      method: 'POST',
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        this.setState({ json });
+      });
+  }
+
+  // componentDidUpdate() {
+  //   // Typical usage (don't forget to compare props):
+  //   if (this.props.day !== this.state.day) {
+  //     const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.state.day}`;
+  //     // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
+  //     fetch(URL, {
+  //       method: 'POST',
+  //     })
+  //       .then((response) => response.json())
+  //       .then((json) => {
+  //         this.setState({ json });
+  //       });
+  //   }
+  // }
+  getDay() {
+    const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.props.day}`;
+    // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
     fetch(URL, {
       method: 'POST',
     })
@@ -24,23 +53,50 @@ class SingleZodiac extends Component {
   }
 
   render() {
+    console.log('STATE', this.state);
     return (
       <div>
         <>
-          <Header />
           <section className="sign-details">
             <div className="sign-styling">
               <p className="current-sign">{this.props.id}</p>
-              <p>{this.state.json.date_range}</p>
-              <p>Today's Date: {this.state.json.current_date} </p>
-              <p>Top Love Match: {this.state.json.compatibility}</p>
-              <p>Lucky Number: {this.state.json.lucky_number} </p>
-              <p>Lucky Time: {this.state.json.lucky_time} </p>
-              <p>Spirit Color: {this.state.json.color} </p>
-              <p>Quality: {this.state.json.mood} </p>
-              <p className="description">
-                Horoscope: {this.state.json.description}{' '}
-              </p>
+              <p className="current-sign">{this.state.json.date_range}</p>
+              <div className="horoscope-styling">
+                <p>Daily Horoscope: {this.state.json.current_date} </p>
+                <p className="description">{this.state.json.description}</p>
+                <p>Compatability: {this.state.json.compatibility}</p>
+                <p>Mood: {this.state.json.mood} </p>
+                <p>Spirit Color: {this.state.json.color} </p>
+                <p>Lucky Number: {this.state.json.lucky_number} </p>
+                <p>Lucky Time of Day: {this.state.json.lucky_time} </p>
+                <Link to={`/${this.props.id}/yesterday`}>
+                  <button
+                    onClick={(e) => {
+                      this.props.updateDay('yesterday');
+                    }}
+                  >
+                    Yesterday
+                  </button>
+                </Link>
+                <Link to={`/${this.props.id}/today`}>
+                  <button
+                    onClick={(e) => {
+                      this.props.updateDay('today');
+                    }}
+                  >
+                    Today
+                  </button>
+                </Link>
+                <Link to={`/${this.props.id}/tomorrow`}>
+                  <button
+                    onClick={(e) => {
+                      this.props.updateDay('tomorrow');
+                    }}
+                  >
+                    Tomorrow
+                  </button>
+                </Link>
+              </div>
             </div>
           </section>
         </>

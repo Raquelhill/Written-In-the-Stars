@@ -1,7 +1,5 @@
 .Header {
-  background-image: linear-gradient(to bottom, transparent, #2f295c),
-    url('cosmic.webp');
-
+  background-image: linear-gradient(transparent, #2f295c), url('cosmic.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,6 +17,7 @@
   flex-direction: row;
   align-items: center;
 }
+
 .star-image {
   padding-bottom: 0px;
 }
@@ -30,13 +29,14 @@
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 .home-button {
   text-decoration: none;
   color: white;
-  padding: 60px;
+  padding-right: 30px;
+  padding-left: 10px;
 }
 .home-button:hover {
   color: white;
@@ -52,12 +52,4 @@
 
 #dropdown-basic-button:hover {
   color: white;
-}
-
-#dropdown-basic-button:focus {
-  border-color: transparent;
-}
-
-.btn-primary:focus {
-  border-color: transparent;
 }
