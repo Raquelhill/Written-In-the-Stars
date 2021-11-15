@@ -52,15 +52,17 @@ class SingleZodiac extends Component {
                 <p>Spirit Color: {this.state.json.color} </p>
                 <p>Lucky Number: {this.state.json.lucky_number} </p>
                 <p>Lucky Time of Day: {this.state.json.lucky_time} </p>
-                <Link to={`/${this.props.id}/yesterday`}>
-                  <button>Yesterday</button>
-                </Link>
-                <Link to={`/${this.props.id}/today`}>
-                  <button>Today</button>
-                </Link>
-                <Link to={`/${this.props.id}/tomorrow`}>
-                  <button>Tomorrow</button>
-                </Link>
+                <div className="day-button-styling">
+                  <Link to={`/${this.props.id}/yesterday`}>
+                    <button className="day-button">Yesterday</button>
+                  </Link>
+                  <Link to={`/${this.props.id}/today`}>
+                    <button className="day-button">Today</button>
+                  </Link>
+                  <Link to={`/${this.props.id}/tomorrow`}>
+                    <button className="day-button">Tomorrow</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </section>
