@@ -7,6 +7,12 @@ import './sag.jpg';
 import { Route } from 'react-router-dom';
 
 class App extends Component {
+  state = { day: 'today' };
+
+  updateDay = (day) => {
+    this.setState({ day: day });
+  };
+
   render() {
     return (
       <main className="App">
@@ -24,11 +30,19 @@ class App extends Component {
         />
         <Route
           path="/:id/:day"
+          // path="/:id"
           render={({ match }) => {
             console.log('MATCH', match.params);
+            console.log('DAY In APP', this.state.day);
             let currentZodiacId = match.params.id;
             let day = match.params.day;
-            return <SingleZodiac id={currentZodiacId} day={day} />;
+            return (
+              <SingleZodiac
+                id={currentZodiacId}
+                day={day}
+                updateDay={this.updateDay}
+              />
+            );
           }}
         />
       </main>
