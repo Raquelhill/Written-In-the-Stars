@@ -8,13 +8,12 @@ class SingleZodiac extends Component {
     super(props);
     this.state = {
       json: {},
-      id: this.props.id,
-      day: this.props.day,
+      id: this.props.id
     };
   }
 
   componentDidMount() {
-    console.log('PROPS', this.props);
+    // console.log('PROPS', this.props);
     const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.props.day}`;
     // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
     fetch(URL, {
@@ -27,16 +26,17 @@ class SingleZodiac extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log('HELLO');
+    console.log('prev', prevProps.day);
+    console.log('now', this.props.day);
     if (this.props.day !== prevProps.day) {
-      const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.state.day}`;
+      const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${window.location.pathname.split('/')[2]}`;
       // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
       fetch(URL, {
         method: 'POST',
       })
         .then((response) => response.json())
         .then((json) => {
-          this.setState({ json });
+          this.setState({ json: json})
         });
     }
   }
@@ -53,7 +53,7 @@ class SingleZodiac extends Component {
   // }
 
   render() {
-    console.log('STATE', this.state);
+    // console.log('STATE', this.state);
     return (
       <div>
         <>
@@ -70,29 +70,17 @@ class SingleZodiac extends Component {
                 <p>Lucky Number: {this.state.json.lucky_number} </p>
                 <p>Lucky Time of Day: {this.state.json.lucky_time} </p>
                 <Link to={`/${this.props.id}/yesterday`}>
-                  <button
-                    onClick={(e) => {
-                      this.props.updateDay('yesterday');
-                    }}
-                  >
+                  <button>
                     Yesterday
                   </button>
                 </Link>
                 <Link to={`/${this.props.id}/today`}>
-                  <button
-                    onClick={(e) => {
-                      this.props.updateDay('today');
-                    }}
-                  >
+                  <button>
                     Today
                   </button>
                 </Link>
                 <Link to={`/${this.props.id}/tomorrow`}>
-                  <button
-                    onClick={(e) => {
-                      this.props.updateDay('tomorrow');
-                    }}
-                  >
+                  <button>
                     Tomorrow
                   </button>
                 </Link>

@@ -11,7 +11,7 @@ class App extends Component {
 
   updateDay = async (day) => {
     await this.setState({ day: day });
-    console.log('STATE', this.state);
+    // console.log('STATE', this.state);
   };
 
   render() {
@@ -36,7 +36,7 @@ class App extends Component {
             render={({ match }) => {
               let currentZodiacId = match.params.id;
               let currentZodiacDay = match.params.day;
-              console.log('VARIABLES', currentZodiacId, currentZodiacDay);
+              // console.log('VARIABLES', currentZodiacId, currentZodiacDay);
               return (
                 <SingleZodiac
                   id={currentZodiacId}
@@ -50,7 +50,7 @@ class App extends Component {
             exact
             path="/:id"
             render={({ match }) => {
-              console.log('MATCH', match.params);
+              // console.log('MATCH', match.params);
               let currentZodiacId = match.params.id;
               return (
                 <>
