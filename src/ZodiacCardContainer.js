@@ -1,8 +1,8 @@
 import React from 'react';
 import ZodiacCard from './ZodiacCard';
-import './ZodiacSignContainer.css';
+import './ZodiacCardContainer.css';
 
-const ZodiacSignContainer = () => {
+const ZodiacCardContainer = () => {
   return (
     <section className="button-container">
       <h1 className="choose-sign">Choose Your Zodiac Sign</h1>
@@ -11,4 +11,4 @@ const ZodiacSignContainer = () => {
   );
 };
 
-export default ZodiacSignContainer;
+export default ZodiacCardContainer;

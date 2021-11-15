@@ -1,6 +1,6 @@
 import './App.css';
 import SingleZodiac from './SingleZodiac';
-import ZodiacSignContainer from './ZodiacSignContainer';
+import ZodiacCardContainer from './ZodiacCardContainer';
 import Header from './Header';
 import React, { Component } from 'react';
 import './sag.jpg';
@@ -24,7 +24,7 @@ class App extends Component {
             render={() => {
               return (
                 <>
-                  <ZodiacSignContainer />
+                  <ZodiacCardContainer />
                 </>
               );
             }}
