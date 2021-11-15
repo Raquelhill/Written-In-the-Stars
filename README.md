@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Written In The Stars</h1>
+<h1>✨ Written In The Stars ✨</h1>
 <p>A React built application where the user can select a zodiac sign, view the selected signs horoscope, and select to see the horoscope from yesterday, today, or tomorrow.</p>
 <a href="https://roasted-popcorn-mod3.surge.sh/">View Deployed Site Here</a>
 </div>
