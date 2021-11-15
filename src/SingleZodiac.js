@@ -8,13 +8,13 @@ class SingleZodiac extends Component {
     super(props);
     this.state = {
       json: {},
-      id: this.props.id
+      id: this.props.id,
     };
   }
 
   componentDidMount() {
     // console.log('PROPS', this.props);
-    const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.props.day}`;
+    const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=today`;
     // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
     fetch(URL, {
       method: 'POST',
@@ -28,8 +28,9 @@ class SingleZodiac extends Component {
   componentDidUpdate(prevProps) {
     console.log('prev', prevProps.day);
     console.log('now', this.props.day);
-    if (this.props.day !== prevProps.day) {
-      const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${window.location.pathname.split('/')[2]}`;
+    if (this.props.day !== prevProps.day || this.props.id !== prevProps.id) {
+      const currentDay = window.location.pathname.split('/')[2] || 'today';
+      const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${currentDay}`;
       // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
       fetch(URL, {
         method: 'POST',
