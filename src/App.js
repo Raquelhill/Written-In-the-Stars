@@ -4,47 +4,59 @@ import ZodiacSignContainer from './ZodiacSignContainer';
 import Header from './Header';
 import React, { Component } from 'react';
 import './sag.jpg';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
-  state = { day: 'today' };
+  state = { day: '' };
 
-  updateDay = (day) => {
-    this.setState({ day: day });
+  updateDay = async (day) => {
+    await this.setState({ day: day });
+    console.log('STATE', this.state);
   };
 
   render() {
     return (
       <main className="App">
         <Header />
-        <Route
-          exact
-          path="/"
-          render={() => {
-            return (
-              <>
-                <ZodiacSignContainer />
-              </>
-            );
-          }}
-        />
-        <Route
-          path="/:id/:day"
-          // path="/:id"
-          render={({ match }) => {
-            console.log('MATCH', match.params);
-            console.log('DAY In APP', this.state.day);
-            let currentZodiacId = match.params.id;
-            let day = match.params.day;
-            return (
-              <SingleZodiac
-                id={currentZodiacId}
-                day={day}
-                updateDay={this.updateDay}
-              />
-            );
-          }}
-        />
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => {
+              return (
+                <>
+                  <ZodiacSignContainer />
+                </>
+              );
+            }}
+          />
+          <Route
+            path="/:id"
+            render={({ match }) => {
+              console.log('MATCH', match.params);
+              let currentZodiacId = match.params.id;
+              return (
+                <>
+                  <SingleZodiac
+                    id={currentZodiacId}
+                    day={'today'}
+                    updateDay={this.updateDay}
+                  />{' '}
+                </>
+              );
+            }}
+          />
+          <Route
+            path="/:id/:day"
+            render={({ match }) => {
+              let currentZodiacId = match.params.id;
+              let currentZodiacDay = match.params.day;
+              return (
+                <SingleZodiac id={currentZodiacId} day={currentZodiacDay} />
+              );
+            }}
+          />
+        </Switch>
       </main>
     );
   }

@@ -14,7 +14,8 @@ class SingleZodiac extends Component {
   }
 
   componentDidMount() {
-    const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.state.day}`;
+    console.log('PROPS', this.props);
+    const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.props.day}`;
     // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
     fetch(URL, {
       method: 'POST',
@@ -25,20 +26,30 @@ class SingleZodiac extends Component {
       });
   }
 
-  componentDidUpdate() {
-    // Typical usage (don't forget to compare props):
-    if (this.props.day !== this.state.day) {
-      const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.state.day}`;
-      // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
-      fetch(URL, {
-        method: 'POST',
-      })
-        .then((response) => response.json())
-        .then((json) => {
-          this.setState({ json });
-          this.props.updateDay(this.state.day);
-        });
-    }
+  // componentDidUpdate() {
+  //   // Typical usage (don't forget to compare props):
+  //   if (this.props.day !== this.state.day) {
+  //     const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.state.day}`;
+  //     // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
+  //     fetch(URL, {
+  //       method: 'POST',
+  //     })
+  //       .then((response) => response.json())
+  //       .then((json) => {
+  //         this.setState({ json });
+  //       });
+  //   }
+  // }
+  getDay() {
+    const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.props.day}`;
+    // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
+    fetch(URL, {
+      method: 'POST',
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        this.setState({ json });
+      });
   }
 
   render() {
@@ -58,24 +69,33 @@ class SingleZodiac extends Component {
                 <p>Spirit Color: {this.state.json.color} </p>
                 <p>Lucky Number: {this.state.json.lucky_number} </p>
                 <p>Lucky Time of Day: {this.state.json.lucky_time} </p>
-                <button
-                  onClick={(e) => {
-                    this.setState({ day: 'yesterday' });
-                  }}
-                >
-                  Yesterday
-                </button>
-                {/* </Link> */}
-                {/* <Link to={`/${this.props.id}/today`}> */}
-                <button onClick={(e) => this.setState({ day: 'today' })}>
-                  Today
-                </button>
-                {/* </Link> */}
-                {/* <Link to={`/${this.props.id}/tomorrow`}> */}
-                <button onClick={(e) => this.setState({ day: 'tomorrow' })}>
-                  Tomorrow
-                </button>
-                {/* </Link> */}
+                <Link to={`/${this.props.id}/yesterday`}>
+                  <button
+                    onClick={(e) => {
+                      this.props.updateDay('yesterday');
+                    }}
+                  >
+                    Yesterday
+                  </button>
+                </Link>
+                <Link to={`/${this.props.id}/today`}>
+                  <button
+                    onClick={(e) => {
+                      this.props.updateDay('today');
+                    }}
+                  >
+                    Today
+                  </button>
+                </Link>
+                <Link to={`/${this.props.id}/tomorrow`}>
+                  <button
+                    onClick={(e) => {
+                      this.props.updateDay('tomorrow');
+                    }}
+                  >
+                    Tomorrow
+                  </button>
+                </Link>
               </div>
             </div>
           </section>

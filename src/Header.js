@@ -29,44 +29,40 @@ class Header extends React.Component {
             title="ZODIAC SIGNS"
             onSelect={(e) => this.setState({ sign: e })}
           >
-            <Dropdown.Item eventKey="aries" as={Link} to="/aries/today">
+            <Dropdown.Item eventKey="aries" as={Link} to="/aries">
               Aries
             </Dropdown.Item>
-            <Dropdown.Item eventKey="taurus" as={Link} to="/taurus/today">
+            <Dropdown.Item eventKey="taurus" as={Link} to="/taurus">
               Taurus
             </Dropdown.Item>
-            <Dropdown.Item eventKey="gemini" as={Link} to="/gemini/today">
+            <Dropdown.Item eventKey="gemini" as={Link} to="/gemini">
               Gemini
             </Dropdown.Item>
-            <Dropdown.Item eventKey="cancer" as={Link} to="/cancer/today">
+            <Dropdown.Item eventKey="cancer" as={Link} to="/cancer">
               Cancer
             </Dropdown.Item>
-            <Dropdown.Item eventKey="leo" as={Link} to="/leo/today">
+            <Dropdown.Item eventKey="leo" as={Link} to="/leo">
               Leo
             </Dropdown.Item>
-            <Dropdown.Item eventKey="virgo" as={Link} to="/virgo/today">
+            <Dropdown.Item eventKey="virgo" as={Link} to="/virgo">
               Virgo
             </Dropdown.Item>
-            <Dropdown.Item eventKey="libra" as={Link} to="/libra/today">
+            <Dropdown.Item eventKey="libra" as={Link} to="/libra">
               Libra
             </Dropdown.Item>
-            <Dropdown.Item eventKey="scorpio" as={Link} to="/scorpio/today">
+            <Dropdown.Item eventKey="scorpio" as={Link} to="/scorpio">
               Scorpio
             </Dropdown.Item>
-            <Dropdown.Item
-              eventKey="sagittarius"
-              as={Link}
-              to="/sagittarius/today"
-            >
+            <Dropdown.Item eventKey="sagittarius" as={Link} to="/sagittarius">
               Sagittarius
             </Dropdown.Item>
-            <Dropdown.Item eventKey="capricorn" as={Link} to="/capricorn/today">
+            <Dropdown.Item eventKey="capricorn" as={Link} to="/capricorn">
               Capricorn
             </Dropdown.Item>
-            <Dropdown.Item eventKey="aquarius" as={Link} to="/aquarius/today">
+            <Dropdown.Item eventKey="aquarius" as={Link} to="/aquarius">
               Aquarius
             </Dropdown.Item>
-            <Dropdown.Item eventKey="pisces" as={Link} to="/pisces/today">
+            <Dropdown.Item eventKey="pisces" as={Link} to="/pisces">
               Pisces
             </Dropdown.Item>
           </DropdownButton>
