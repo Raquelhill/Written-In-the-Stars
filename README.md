@@ -42,8 +42,8 @@
         <td><img src="https://cdn.freebiesupply.com/logos/large/2x/figma-1-logo-png-transparent.png" alt="figma" width="100" height="auto" /></td>
         <td><img src="https://user-images.githubusercontent.com/73092355/119361263-b5f0a600-bc68-11eb-9f41-8e10aa013e7a.png" alt="Cypress" width="100" height="auto" /></td>
 
-        <td><img src="(https://user-images.githubusercontent.com/81186709/141847688-24672606-6c10-4eeb-846d-a97d9c58b223.jpg)" alt="Surge" width="100" height="auto" /></td>
-         <td><img src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/08/wall-2.jpeg" alt="Heroku" width="100" height="auto" /></td>
+        <td><img src="https://user-images.githubusercontent.com/81186709/141847688-24672606-6c10-4eeb-846d-a97d9c58b223.jpg" alt="Surge" width="100" height="auto" /></td>
+         <td><img src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/08/wall-2.jpeg" alt="Fetch" width="100" height="auto" /></td>
     </tr>
 </table>
 
