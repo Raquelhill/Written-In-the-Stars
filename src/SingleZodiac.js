@@ -26,31 +26,31 @@ class SingleZodiac extends Component {
       });
   }
 
-  // componentDidUpdate() {
-  //   // Typical usage (don't forget to compare props):
-  //   if (this.props.day !== this.state.day) {
-  //     const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.state.day}`;
-  //     // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
-  //     fetch(URL, {
-  //       method: 'POST',
-  //     })
-  //       .then((response) => response.json())
-  //       .then((json) => {
-  //         this.setState({ json });
-  //       });
-  //   }
-  // }
-  getDay() {
-    const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.props.day}`;
-    // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
-    fetch(URL, {
-      method: 'POST',
-    })
-      .then((response) => response.json())
-      .then((json) => {
-        this.setState({ json });
-      });
+  componentDidUpdate(prevProps) {
+    console.log('HELLO');
+    if (this.props.day !== prevProps.day) {
+      const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.state.day}`;
+      // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
+      fetch(URL, {
+        method: 'POST',
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          this.setState({ json });
+        });
+    }
   }
+  // getDay() {
+  //   const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${this.props.day}`;
+  //   // const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}`;
+  //   fetch(URL, {
+  //     method: 'POST',
+  //   })
+  //     .then((response) => response.json())
+  //     .then((json) => {
+  //       this.setState({ json });
+  //     });
+  // }
 
   render() {
     console.log('STATE', this.state);

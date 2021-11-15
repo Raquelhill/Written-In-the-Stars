@@ -7,7 +7,7 @@ import './sag.jpg';
 import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
-  state = { day: '' };
+  state = { day: 'today' };
 
   updateDay = async (day) => {
     await this.setState({ day: day });
@@ -31,6 +31,23 @@ class App extends Component {
             }}
           />
           <Route
+            exact
+            path="/:id/:day"
+            render={({ match }) => {
+              let currentZodiacId = match.params.id;
+              let currentZodiacDay = match.params.day;
+              console.log('VARIABLES', currentZodiacId, currentZodiacDay);
+              return (
+                <SingleZodiac
+                  id={currentZodiacId}
+                  day={currentZodiacDay}
+                  updateDay={this.updateDay}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
             path="/:id"
             render={({ match }) => {
               console.log('MATCH', match.params);
@@ -39,20 +56,10 @@ class App extends Component {
                 <>
                   <SingleZodiac
                     id={currentZodiacId}
-                    day={'today'}
+                    day={this.state.day}
                     updateDay={this.updateDay}
-                  />{' '}
+                  />
                 </>
-              );
-            }}
-          />
-          <Route
-            path="/:id/:day"
-            render={({ match }) => {
-              let currentZodiacId = match.params.id;
-              let currentZodiacDay = match.params.day;
-              return (
-                <SingleZodiac id={currentZodiacId} day={currentZodiacDay} />
               );
             }}
           />
