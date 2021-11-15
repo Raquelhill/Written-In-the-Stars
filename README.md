@@ -52,39 +52,32 @@
 
 ## Wins
 
+- Creating and designing and application from scratch using an API that I found and tested.  
 - Successfully utilizing React from the planning process to implementing contolled forms
 - Building a multi-page website utilizing React Router
-- Implementing end-to-end (E2E) testing with Cypress for the first time
-- Working asynchronously to tackle various parts of the project and resolving merge conflicts as they arose
-- Creating appropriate error handling and displaying error and loading messages to the user
-- Using Figma to outline high level project aesthetic and functionality
-- Using Github Project Board to plan our project
-- Collaborating with teammates to tackle complicated tasks and trying various approaches
-- Making our application meet accessibility principles  
+- Implementing end-to-end (E2E) testing with Cypress 
+- Using Github Project Board to plan the project
+- Making the application meet accessibility principles, achieved Lighthhouse score of 100 
 - Utilizing resources such as web documents and mentors to expand knowledge base and maximize application display and performance
 
 ## Challenges
 
-- Implementing React for the first time challenged us to plan our project differently
-- Refactoring our project to implement React Router for the first time
-- Utilizing Cypress for the first time was an interesting challenge
-- Keeping our CSS organized and ensuring our styling was applied appropriately
+- Finding a FREE API that worked.  
+- Getting the appropriate day to render to the page on button click.  
 
 ## Future Features
 
 - Sign in functionality through building an Express back end server
-- Allow users to submit ratings and save movies to their favorites
-- Add filtering functionality to search by genre
+- Implement a second API in order to create extra functionality (User can click on their love match and read traits about that sign)
 
 ## Contributors
 
 This project was developed by:
 
 - [Raquel Hill](https://github.com/Raquelhill)
-- [Natalia Zamboni Vergara](https://github.com/nzambonivergara)
 
-[Project Spec](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html) provided by the Turing School of Software & Design.
+[Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html) provided by the Turing School of Software & Design.
 
-*Raquel and Natalia are students of front-end engineering at the Turing School of Software & Design.*
+*Raquel is a student of front-end engineering at the Turing School of Software & Design.*
 ---
 
