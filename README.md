@@ -7,8 +7,7 @@
 
 ## Snapshot of Application
 
-![popcorn giphy 4](https://user-images.githubusercontent.com/81186709/139349542-1619f773-6367-4f21-a20f-ed00015ee506.gif)
-
+![stars](https://user-images.githubusercontent.com/81186709/141878047-c5934168-24af-407e-b5c9-201ea096be66.gif)
 
 
 1. From the home view, the user can:
