@@ -55,3 +55,40 @@
   width: 220px;
   margin: 4px;
 }
+
+@media only screen and (max-width: 950px) {
+  .current_date {
+    font-size: 12px;
+  }
+
+  .horoscope-styling {
+    height: 400px;
+    width: 300px;
+  }
+
+  .description {
+    font-size: 12px;
+    width: 200px;
+    margin-right: 20px;
+  }
+
+  .compatibility {
+    font-size: 12px;
+  }
+
+  .mood {
+    font-size: 12px;
+  }
+
+  .color {
+    font-size: 12px;
+  }
+
+  .lucky_number {
+    font-size: 12px;
+  }
+
+  .lucky_time {
+    font-size: 12px;
+  }
+}

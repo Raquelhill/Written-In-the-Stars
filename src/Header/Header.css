@@ -53,3 +53,36 @@
 #dropdown-basic-button:hover {
   color: white;
 }
+
+@media only screen and (max-width: 950px) {
+  .Header {
+    height: 300px;
+  }
+
+  .star-image {
+    height: 100px;
+  }
+
+  .title {
+    font-size: 30px;
+    width: 200px;
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #dropdown-basic-button {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .home-button {
+    font-size: 20px;
+    padding-right: 5px;
+  }
+}

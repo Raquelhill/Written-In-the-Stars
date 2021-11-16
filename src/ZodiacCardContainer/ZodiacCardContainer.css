@@ -11,3 +11,9 @@
   display: flex;
   justify-content: center;
 }
+
+@media only screen and (max-width: 950px) {
+  .choose-sign {
+    font-size: 25px;
+  }
+}
