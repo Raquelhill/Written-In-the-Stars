@@ -24,7 +24,7 @@ class SingleZodiac extends Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.day !== prevProps.day || this.props.id !== prevProps.id) {
-      const currentDay = window.location.pathname.split('/')[2] || 'today';
+      const currentDay = window.location.pathname.split('/')[3] || 'today';
       const URL = `https://aztro.sameerkumar.website/?sign=${this.props.id}&day=${currentDay}`;
       fetch(URL, {
         method: 'POST',
@@ -63,17 +63,17 @@ class SingleZodiac extends Component {
                   Lucky Time of Day: {this.state.json.lucky_time}
                 </p>
                 <div className="day-button-styling">
-                  <Link to={`/${this.props.id}/yesterday`}>
+                  <Link to={`singlezodiac/${this.props.id}/yesterday`}>
                     <button className="day-button yesterday-day-button">
                       Yesterday
                     </button>
                   </Link>
-                  <Link to={`/${this.props.id}/today`}>
+                  <Link to={`singlezodiac/${this.props.id}/today`}>
                     <button className="day-button today-day-button">
                       Today
                     </button>
                   </Link>
-                  <Link to={`/${this.props.id}/tomorrow`}>
+                  <Link to={`singlezodiac/${this.props.id}/tomorrow`}>
                     <button className="day-button tomorrow-day-button">
                       Tomorrow
                     </button>
