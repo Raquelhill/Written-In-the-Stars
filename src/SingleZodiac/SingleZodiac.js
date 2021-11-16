@@ -48,7 +48,7 @@ class SingleZodiac extends Component {
               </p>
               <div className="horoscope-styling">
                 <p className="current_date">
-                  Daily Horoscope: {this.state.json.current_date}{' '}
+                  Daily Horoscope: {this.state.json.current_date}
                 </p>
                 <p className="description">{this.state.json.description}</p>
                 <p className="compatibility">
@@ -57,10 +57,10 @@ class SingleZodiac extends Component {
                 <p className="mood">Mood: {this.state.json.mood} </p>
                 <p className="color">Spirit Color: {this.state.json.color} </p>
                 <p className="lucky_number">
-                  Lucky Number: {this.state.json.lucky_number}{' '}
+                  Lucky Number: {this.state.json.lucky_number}
                 </p>
                 <p className="lucky_time">
-                  Lucky Time of Day: {this.state.json.lucky_time}{' '}
+                  Lucky Time of Day: {this.state.json.lucky_time}
                 </p>
                 <div className="day-button-styling">
                   <Link to={`/${this.props.id}/yesterday`}>

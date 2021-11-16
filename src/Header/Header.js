@@ -3,7 +3,7 @@ import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import Giphy from './giphy.gif';
+import Giphy from '.././assets/giphy.gif';
 class Header extends React.Component {
   constructor(props) {
     super(props);

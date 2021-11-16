@@ -1,5 +1,5 @@
 import React from 'react';
-import ZodiacCard from './ZodiacCard';
+import ZodiacCard from '../ZodiacCard/ZodiacCard';
 import './ZodiacCardContainer.css';
 
 const ZodiacCardContainer = () => {

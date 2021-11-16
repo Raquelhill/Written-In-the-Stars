@@ -1,16 +1,17 @@
 import './App.css';
-import SingleZodiac from './SingleZodiac';
-import ZodiacCardContainer from './ZodiacCardContainer';
-import Header from './Header';
+import Error from '../Error/Error';
+import SingleZodiac from '../SingleZodiac/SingleZodiac';
+import ZodiacCardContainer from '../ZodiacCardContainer/ZodiacCardContainer';
+import Header from '../Header/Header';
 import React, { Component } from 'react';
-import './sag.jpg';
+// import './sag.jpg';
 import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   state = { day: 'today' };
 
-  updateDay = async (day) => {
-    await this.setState({ day: day });
+  updateDay = (day) => {
+    this.setState({ day: day });
   };
 
   render() {
@@ -60,6 +61,7 @@ class App extends Component {
               );
             }}
           />
+          <Route render={() => <Error />} />
         </Switch>
       </main>
     );

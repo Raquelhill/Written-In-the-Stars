@@ -1,18 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ZodiacCard.css';
 import { Link } from 'react-router-dom';
-import virgo from './virgo.webp';
-import taurus from './taurus.webp';
-import scorpio from './scorpio.webp';
-import pisces from './pisces.webp';
-import libra from './libra.webp';
-import leo from './leo.webp';
-import gemini from './gemini.webp';
-import capricorn from './capricorn.webp';
-import cancer from './cancer.webp';
-import aries from './aries.webp';
-import aquarius from './aquarius.webp';
-import sag from './sag.jpg';
+import virgo from '.././assets/virgo.webp';
+import taurus from '.././assets/taurus.webp';
+import scorpio from '.././assets/scorpio.webp';
+import pisces from '.././assets/pisces.webp';
+import libra from '.././assets/libra.webp';
+import leo from '.././assets/leo.webp';
+import gemini from '.././assets/gemini.webp';
+import capricorn from '.././assets/capricorn.webp';
+import cancer from '.././assets/cancer.webp';
+import aries from '.././assets/aries.webp';
+import aquarius from '.././assets/aquarius.webp';
+import sag from '.././assets/sag.jpg';
 
 const ZodiacCard = () => {
   return (
@@ -132,3 +133,7 @@ const ZodiacCard = () => {
 };
 
 export default ZodiacCard;
+
+ZodiacCard.propTypes = {
+  id: PropTypes.number,
+};
