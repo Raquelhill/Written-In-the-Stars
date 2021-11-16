@@ -4,7 +4,6 @@ import SingleZodiac from '../SingleZodiac/SingleZodiac';
 import ZodiacCardContainer from '../ZodiacCardContainer/ZodiacCardContainer';
 import Header from '../Header/Header';
 import React, { Component } from 'react';
-// import './sag.jpg';
 import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
@@ -32,8 +31,9 @@ class App extends Component {
           />
           <Route
             exact
-            path="/:id/:day"
+            path="/singlezodiac/:id/:day"
             render={({ match }) => {
+              console.log(match);
               let currentZodiacId = match.params.id;
               let currentZodiacDay = match.params.day;
               return (
@@ -47,8 +47,9 @@ class App extends Component {
           />
           <Route
             exact
-            path="/:id"
+            path="/singlezodiac/:id"
             render={({ match }) => {
+              console.log(match);
               let currentZodiacId = match.params.id;
               return (
                 <>

@@ -29,40 +29,72 @@ class Header extends React.Component {
               this.setState({ sign: e });
             }}
           >
-            <Dropdown.Item eventKey="aries" as={Link} to="/aries">
+            <Dropdown.Item eventKey="aries" as={Link} to="/singlezodiac/aries">
               Aries
             </Dropdown.Item>
-            <Dropdown.Item eventKey="taurus" as={Link} to="/taurus">
+            <Dropdown.Item
+              eventKey="taurus"
+              as={Link}
+              to="/singlezodiac/taurus"
+            >
               Taurus
             </Dropdown.Item>
-            <Dropdown.Item eventKey="gemini" as={Link} to="/gemini">
+            <Dropdown.Item
+              eventKey="gemini"
+              as={Link}
+              to="/singlezodiac/gemini"
+            >
               Gemini
             </Dropdown.Item>
-            <Dropdown.Item eventKey="cancer" as={Link} to="/cancer">
+            <Dropdown.Item
+              eventKey="cancer"
+              as={Link}
+              to="/singlezodiac/cancer"
+            >
               Cancer
             </Dropdown.Item>
-            <Dropdown.Item eventKey="leo" as={Link} to="/leo">
+            <Dropdown.Item eventKey="leo" as={Link} to="/singlezodiac/leo">
               Leo
             </Dropdown.Item>
-            <Dropdown.Item eventKey="virgo" as={Link} to="/virgo">
+            <Dropdown.Item eventKey="virgo" as={Link} to="/singlezodiac/virgo">
               Virgo
             </Dropdown.Item>
-            <Dropdown.Item eventKey="libra" as={Link} to="/libra">
+            <Dropdown.Item eventKey="libra" as={Link} to="/singlezodiac/libra">
               Libra
             </Dropdown.Item>
-            <Dropdown.Item eventKey="scorpio" as={Link} to="/scorpio">
+            <Dropdown.Item
+              eventKey="scorpio"
+              as={Link}
+              to="/singlezodiac/scorpio"
+            >
               Scorpio
             </Dropdown.Item>
-            <Dropdown.Item eventKey="sagittarius" as={Link} to="/sagittarius">
+            <Dropdown.Item
+              eventKey="sagittarius"
+              as={Link}
+              to="/singlezodiac/sagittarius"
+            >
               Sagittarius
             </Dropdown.Item>
-            <Dropdown.Item eventKey="capricorn" as={Link} to="/capricorn">
+            <Dropdown.Item
+              eventKey="capricorn"
+              as={Link}
+              to="/singlezodiac/capricorn"
+            >
               Capricorn
             </Dropdown.Item>
-            <Dropdown.Item eventKey="aquarius" as={Link} to="/aquarius">
+            <Dropdown.Item
+              eventKey="aquarius"
+              as={Link}
+              to="/singlezodiac/aquarius"
+            >
               Aquarius
             </Dropdown.Item>
-            <Dropdown.Item eventKey="pisces" as={Link} to="/pisces">
+            <Dropdown.Item
+              eventKey="pisces"
+              as={Link}
+              to="/singlezodiac/pisces"
+            >
               Pisces
             </Dropdown.Item>
           </DropdownButton>

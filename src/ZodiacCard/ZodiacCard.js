@@ -19,7 +19,7 @@ const ZodiacCard = () => {
   return (
     <>
       <section className="buttons">
-        <Link to={`/aries`}>
+        <Link to={`/singlezodiac/aries`}>
           <div>
             <button className="button-styling" id="aries">
               <img src={aries} alt="Aries symbol" />
@@ -28,7 +28,7 @@ const ZodiacCard = () => {
             </button>
           </div>
         </Link>
-        <Link to={`/taurus`}>
+        <Link to={`/singlezodiac/taurus`}>
           <div>
             <button className="button-styling" id="taurus">
               <img src={taurus} alt="Taurus symbol" />
@@ -37,7 +37,7 @@ const ZodiacCard = () => {
             </button>
           </div>
         </Link>
-        <Link to={`/gemini`}>
+        <Link to={`/singlezodiac/gemini`}>
           <div>
             <button className="button-styling" id="gemini">
               <img src={gemini} alt="Gemini symbol" />
@@ -46,7 +46,7 @@ const ZodiacCard = () => {
             </button>
           </div>
         </Link>
-        <Link to={`/cancer`}>
+        <Link to={`/singlezodiac/cancer`}>
           <div>
             <button className="button-styling" id="cancer">
               <img src={cancer} alt="Cancer symbol" />
@@ -55,7 +55,7 @@ const ZodiacCard = () => {
             </button>
           </div>
         </Link>
-        <Link to={`/leo`}>
+        <Link to={`/singlezodiac/leo`}>
           <div>
             <button className="button-styling" id="leo">
               <img src={leo} alt="Leo symbol" />
@@ -64,7 +64,7 @@ const ZodiacCard = () => {
             </button>
           </div>
         </Link>
-        <Link to={`/virgo`}>
+        <Link to={`/singlezodiac/virgo`}>
           <div>
             <button className="button-styling" id="virgo">
               <img src={virgo} alt="Virgo Icon" />
@@ -73,7 +73,7 @@ const ZodiacCard = () => {
             </button>
           </div>
         </Link>
-        <Link to={`/libra`}>
+        <Link to={`/singlezodiac/libra`}>
           <div>
             <button className="button-styling" id="libra">
               <img src={libra} alt="Libra Icon" />
@@ -82,7 +82,7 @@ const ZodiacCard = () => {
             </button>
           </div>
         </Link>
-        <Link to={`/scorpio`}>
+        <Link to={`/singlezodiac/scorpio`}>
           <div>
             <button className="button-styling" id="scorpio">
               <img src={scorpio} alt="Scorpio Icon" />
@@ -91,7 +91,7 @@ const ZodiacCard = () => {
             </button>
           </div>
         </Link>
-        <Link to={`/sagittarius`}>
+        <Link to={`/singlezodiac/sagittarius`}>
           <div>
             <button className="button-styling" id="sagittarius">
               <img src={sag} alt="Sagittarius Icon" />
@@ -100,7 +100,7 @@ const ZodiacCard = () => {
             </button>
           </div>
         </Link>
-        <Link to={`/capricorn`}>
+        <Link to={`/singlezodiac/capricorn`}>
           <div>
             <button className="button-styling" id="capricorn">
               <img src={capricorn} alt="Capricorn Icon" />
@@ -109,7 +109,7 @@ const ZodiacCard = () => {
             </button>
           </div>
         </Link>
-        <Link to={`/aquarius`}>
+        <Link to={`/singlezodiac/aquarius`}>
           <div>
             <button className="button-styling" id="aquarius">
               <img src={aquarius} alt="Aquarius Icon" />
@@ -118,7 +118,7 @@ const ZodiacCard = () => {
             </button>
           </div>
         </Link>
-        <Link to={`/pisces`}>
+        <Link to={`/singlezodiac/pisces`}>
           <div>
             <button className="button-styling" id="pisces">
               <img src={pisces} alt="Pisces Icon" />
