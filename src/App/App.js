@@ -45,23 +45,6 @@ class App extends Component {
               );
             }}
           />
-          <Route
-            exact
-            path="/singlezodiac/:id"
-            render={({ match }) => {
-              console.log(match);
-              let currentZodiacId = match.params.id;
-              return (
-                <>
-                  <SingleZodiac
-                    id={currentZodiacId}
-                    day={this.state.day}
-                    updateDay={this.updateDay}
-                  />
-                </>
-              );
-            }}
-          />
           <Route render={() => <Error />} />
         </Switch>
       </main>
