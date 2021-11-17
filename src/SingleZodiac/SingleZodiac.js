@@ -6,7 +6,7 @@ class SingleZodiac extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      json: {},
+      zodiacData: {},
       id: this.props.id,
     };
   }
@@ -17,8 +17,8 @@ class SingleZodiac extends Component {
       method: 'POST',
     })
       .then((response) => response.json())
-      .then((json) => {
-        this.setState({ json });
+      .then((zodiacData) => {
+        this.setState({ zodiacData });
       });
   }
 
@@ -30,8 +30,8 @@ class SingleZodiac extends Component {
         method: 'POST',
       })
         .then((response) => response.json())
-        .then((json) => {
-          this.setState({ json: json });
+        .then((zodiacData) => {
+          this.setState({ zodiacData: zodiacData });
         });
     }
   }
@@ -44,36 +44,40 @@ class SingleZodiac extends Component {
             <div className="sign-styling">
               <p className="current-sign current-sign-title">{this.props.id}</p>
               <p className="current-sign date_range">
-                {this.state.json.date_range}
+                {this.state.zodiacData.date_range}
               </p>
               <div className="horoscope-styling">
                 <p className="current_date">
-                  Daily Horoscope: {this.state.json.current_date}
+                  Daily Horoscope: {this.state.zodiacData.current_date}
                 </p>
-                <p className="description">{this.state.json.description}</p>
+                <p className="description">
+                  {this.state.zodiacData.description}
+                </p>
                 <p className="compatibility">
-                  Compatability: {this.state.json.compatibility}
+                  Compatability: {this.state.zodiacData.compatibility}
                 </p>
-                <p className="mood">Mood: {this.state.json.mood} </p>
-                <p className="color">Spirit Color: {this.state.json.color} </p>
+                <p className="mood">Mood: {this.state.zodiacData.mood} </p>
+                <p className="color">
+                  Spirit Color: {this.state.zodiacData.color}{' '}
+                </p>
                 <p className="lucky_number">
-                  Lucky Number: {this.state.json.lucky_number}
+                  Lucky Number: {this.state.zodiacData.lucky_number}
                 </p>
                 <p className="lucky_time">
-                  Lucky Time of Day: {this.state.json.lucky_time}
+                  Lucky Time of Day: {this.state.zodiacData.lucky_time}
                 </p>
                 <div className="day-button-styling">
-                  <Link to={`singlezodiac/${this.props.id}/yesterday`}>
+                  <Link to={`yesterday`}>
                     <button className="day-button yesterday-day-button">
                       Yesterday
                     </button>
                   </Link>
-                  <Link to={`singlezodiac/${this.props.id}/today`}>
+                  <Link to={`today`}>
                     <button className="day-button today-day-button">
                       Today
                     </button>
                   </Link>
-                  <Link to={`singlezodiac/${this.props.id}/tomorrow`}>
+                  <Link to={`tomorrow`}>
                     <button className="day-button tomorrow-day-button">
                       Tomorrow
                     </button>
