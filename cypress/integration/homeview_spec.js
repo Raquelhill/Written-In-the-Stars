@@ -2,7 +2,7 @@ describe('Home View', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000');
   });
-  it('Should have am img that displays blinking stars', () => {
+  it('Should have an img that displays blinking stars', () => {
     cy.get('img')
       .should(
         'have.attr',
@@ -30,8 +30,6 @@ describe('Home View', () => {
   it('Should display all zodiac cards', () => {
     cy.get('p')
       .contains('Aries')
-      .get('p')
-      .contains('Mar 21 - Apr 19')
       .get('img')
       .should(
         'have.attr',
